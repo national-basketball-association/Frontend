@@ -1,11 +1,13 @@
 var fileInput = document.getElementById("csv");
+var btn = document.getElementsByClassName("team");
 
 readFile = function () {
-  var reader = new FileReader();
-  reader.onload = function () {
-
-    console.log(reader.result);
-    var str = reader.result;
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  const url = "https://s3.amazonaws.com/national-basketball-predictions-system/ATL_2015_to_2018.csv"; // site that doesn’t send Access-Control-*
+  fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
+  .then(response => response.text())
+  .then(contents => {
+    var str = contents;
     var rows = str.split("\n");
     var titles = rows[0].split(",");
 
@@ -49,9 +51,17 @@ readFile = function () {
 
     var element = document.getElementById("table");
     element.appendChild(table);
-  };
 
-  reader.readAsBinaryString(fileInput.files[0]);
+  // reader.readAsBinaryString(fileInput.files[0]);
+  })
+  .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
 };
 
-fileInput.addEventListener('change', readFile);
+function print() {
+  console.log("works");
+}
+
+// fileInput.addEventListener('change', readFile);
+for (var i = 0; i < btn.length; i++) {
+    btn[i].addEventListener('click', readFile, false);
+}
