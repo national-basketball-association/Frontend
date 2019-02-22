@@ -15,10 +15,10 @@ readFile = function () {
     //build table header
     var table = document.createElement("TABLE");
     table.classList.add("table");
-    table.classList.add("table-striped");
+    // table.classList.add("table-striped");
     var thead = document.createElement("THEAD");
     var tr = document.createElement("TR");
-    for (i = 2; i < titles.length; i++) {
+    for (i = 3; i < titles.length; i++) {
       var th = document.createElement("TH");
       var t = document.createTextNode(titles[i]);
       th.appendChild(t);
@@ -34,8 +34,8 @@ readFile = function () {
         var content = rows[i].split(",");
 
         var j;
-        for (j = 2; j < content.length; j++) {
-          var body_th = document.createElement("TH");
+        for (j = 3; j < content.length; j++) {
+          var body_th = document.createElement("TD");
           var body_t = document.createTextNode(content[j]);
           body_th.appendChild(body_t);
           body_tr.appendChild(body_th);

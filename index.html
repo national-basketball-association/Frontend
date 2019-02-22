@@ -113,7 +113,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="button-margin">
-              <button type="button" class="btn-lg btn-pill btn-GSW btn-block">
+              <button type="button" class="btn-lg btn-pill btn-ATL btn-block" data-toggle="modal" data-target="#myModal">
                 Atlanta Hawks
               </button>
             </div>
@@ -343,7 +343,41 @@
       </div>
     </section>
 
-    <!--
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Team Statistics</h4>
+          </div>
+          <div class="modal-body">
+
+            <input type="file" name="" value="" id="csv">
+
+            <div class="row">
+              <div class="col-md-12" id="table">
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style media="screen">
+      .modal-lg {
+        max-width: 95%;
+      }
+
+      tr {
+        word-break: break-all;
+        font-size: .65rem;
+      }
+    </style>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -361,5 +395,6 @@
 
       <!-- Custom scripts for this template -->
       <script src="js/creative.js"></script>
+      <script type="text/javascript" src="js/csvData.js"></script>
   </body>
 </html>
