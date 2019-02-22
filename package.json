@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/national-basketball-association/Frontend#readme",
   "devDependencies": {
+    "eslint": "^5.14.1",
     "mocha": "^6.0.1"
   }
 }
