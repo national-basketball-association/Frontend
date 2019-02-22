@@ -14,6 +14,8 @@ readFile = function () {
 
     //build table header
     var table = document.createElement("TABLE");
+    table.classList.add("table");
+    table.classList.add("table-striped");
     var thead = document.createElement("THEAD");
     var tr = document.createElement("TR");
     for (i = 2; i < titles.length; i++) {
