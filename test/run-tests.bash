@@ -9,7 +9,10 @@ set -e
 cd "${0%/*}/.."
 
 # let's fake failing test for now 
+echo "installing dependencies"
+npm i
 echo "Running tests"
+npm test
 echo "............................" 
 echo "Succesful!" && exit 0
 echo "Failed!" && exit 1
