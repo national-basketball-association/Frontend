@@ -2,127 +2,169 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="css/creative.css" rel="stylesheet">
     <link href="css/table.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <title>Predictions</title>
     <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
     <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
 </head>
 
 <body>
-<h1 class="text-uppercase font-weight-bold">Upcoming Game Predictions</h1>
-
-
-<div class="container">
-
-    <div class="table">
-        <div class="table-header">
-            <div class="header__item"><a id="statistics" class="filter__link" href="#">Statistics Used</a></div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">NPS</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#predictions">Predictions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="index.html">Team</a>
+                </li>
+            </ul>
         </div>
-        <div class="table-content">
-            <div class="table-row">
-                <div class="table-data">Season ID</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Team ID</div>
+    </div>
+</nav>
 
-            </div>
-            <div class="table-row">
-                <div class="table-data">Team Abbreviation</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Team Name</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Game ID</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Game Date</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Game Matchup</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Win/Loose</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Minutes</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Points</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Field Goals Made</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Field Goals Attempted</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Field Goal Percentage</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Field Goal 3-Pointers Made</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">3-Pointers Attempted</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">3-Point Percentage</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Free Throws</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Free Throws Attempted</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Free Throw Percentage</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Offensive Rebounds</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Defensive Rebounds</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Rebounds</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Assists</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Steals</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Blocks</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Turnovers</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Personal Fouls</div>
-            </div>
-            <div class="table-row">
-                <div class="table-data">Plus Minus</div>
-            </div>
-        </div>
+
+<h1 class="text-uppercase text-black-50 font-weight-bold">Upcoming Game Predictions</h1>
+
+
+        <!-- Statistics Used section -->
+        <section id="stats" class="page-section">
+            <hr class="my-4">
+            <div class="col-log-8 align-self-baseline">
+                <div class="container">
+                    <div class="table">
+                        <div class="table-header">
+                            <div class="header__item"><a id="statistics" class="filter__link" href="#">Statistics
+                                Used</a></div>
+                        </div>
+                        <div class="table-content">
+                            <div class="table-row">
+                                <div class="table-data">Season ID</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Team ID</div>
+
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Team Abbreviation</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Team Name</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Game ID</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Game Date</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Game Matchup</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Win/Loose</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Minutes</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Points</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Field Goals Made</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Field Goals Attempted</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Field Goal Percentage</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Field Goal 3-Pointers Made</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">3-Pointers Attempted</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">3-Point Percentage</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Free Throws</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Free Throws Attempted</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Free Throw Percentage</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Offensive Rebounds</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Defensive Rebounds</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Rebounds</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Assists</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Steals</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Blocks</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Turnovers</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Personal Fouls</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-data">Plus Minus</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
     </div>
 </div>
 
-<div id="bm" style="width: 100%; height: 100%"></div>
-<div id="pp" style="width: 100%; height: 100%"></div>
-<div id="sr" style="width: 100%; height: 100%"></div>
-<div id="wh" style="width: 100%; height: 100%"></div>
-<div id="ph" style="width: 100%; height: 100%"></div>
-<div id="tk" style="width: 100%; height: 100%"></div>
-<div id="cg" style="width: 100%; height: 100%"></div>
-<div id="nm" style="width: 100%; height: 100%"></div>
-<div id="jt" style="width: 100%; height: 100%"></div>
+
+<!-- Pie Charts section -->
+
+<section id="predictions" class="page-section">
+    <div id="bm" style="width: 100%; height: 100%"></div>
+    <div id="pp" style="width: 100%; height: 100%"></div>
+    <div id="sr" style="width: 100%; height: 100%"></div>
+    <div id="wh" style="width: 100%; height: 100%"></div>
+    <div id="ph" style="width: 100%; height: 100%"></div>
+    <div id="tk" style="width: 100%; height: 100%"></div>
+    <div id="cg" style="width: 100%; height: 100%"></div>
+    <div id="nm" style="width: 100%; height: 100%"></div>
+    <div id="jt" style="width: 100%; height: 100%"></div>
+</section>
 
 <script>
     <!-- chart code will be here -->
-    anychart.onDocumentReady(function() {
+    anychart.onDocumentReady(function () {
 
         // set the data
         var data = [
@@ -145,7 +187,7 @@
 
     });
 
-    anychart.onDocumentReady(function() {
+    anychart.onDocumentReady(function () {
 
         // set the data
         var data = [
@@ -168,7 +210,7 @@
 
     });
 
-    anychart.onDocumentReady(function() {
+    anychart.onDocumentReady(function () {
 
         // set the data
         var data = [
@@ -191,7 +233,7 @@
 
     });
 
-    anychart.onDocumentReady(function() {
+    anychart.onDocumentReady(function () {
 
         // set the data
         var data = [
@@ -214,7 +256,7 @@
 
     });
 
-    anychart.onDocumentReady(function() {
+    anychart.onDocumentReady(function () {
 
         // set the data
         var data = [
@@ -237,7 +279,7 @@
 
     });
 
-    anychart.onDocumentReady(function() {
+    anychart.onDocumentReady(function () {
 
         // set the data
         var data = [
@@ -261,7 +303,7 @@
     });
 
 
-    anychart.onDocumentReady(function() {
+    anychart.onDocumentReady(function () {
 
         // set the data
         var data = [
@@ -284,7 +326,7 @@
 
     });
 
-    anychart.onDocumentReady(function() {
+    anychart.onDocumentReady(function () {
 
         // set the data
         var data = [
@@ -307,7 +349,7 @@
 
     });
 
-    anychart.onDocumentReady(function() {
+    anychart.onDocumentReady(function () {
 
         // set the data
         var data = [
